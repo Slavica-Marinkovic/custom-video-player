@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/mountain.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>Custom video player</title>
+</head>
+<body>
+    <div class="video-container">
+        <h1>Top 5 mountain ranges in Europe</h1>
+        <video width="100%" poster="media/image.png">
+          <source src="media/mountain ranges in Europe.mp4" type="video/mp4">
+          <source src="media/mountain ranges in Europe.webm" type="video/webm">
+        </video>
+        <div class="controls">
+          <span id="set-time"></span>
+          <div class="control-bar">
+            <div class="control-bar-fill"></div>
+          </div>
+          <div class="controls-btns">
+            <div class="controls-left">
+              <div class="play">
+                <img class ="play-img btns" src="media/play_arrow_white_36dp.svg">
+              </div>
+              <div class="volume">
+                <img class="volume-up btns" src="media/volume_up_white_24dp.svg">
+                <input type="range" id="range" value="100" min="0" max="100" onchange="setVolume()">
+              </div>
+            </div>
+            <div class="time-display">
+              <span class="time"></span>
+              <span>/</span>
+              <span class="duration"></span>
+            </div>
+            <div class="controls-right">
+              <div class="rewind">
+                <img class="btns" src="media/replay_10_white_36dp.svg">
+              </div>
+              <div class="forward">
+                <img class="btns" src="media/forward_10_white_36dp.svg">
+              </div>
+              <div class="settings">
+                <img class="btns" src="media/settings_white_24dp.svg">
+              </div>
+              <div class="show-speed">
+                <img src="media/slow_motion_video_white_24dp.svg">
+                <p>Playback speed</p>
+              </div>
+              <div class="speed">
+                <ul>
+                  <li class="speed-val">0.5</li>
+                  <li class="speed-val">0.75</li>
+                  <li class="speed-val current">1</li>
+                  <li class="speed-val">1.5</li>
+                  <li class="speed-val">2</li>
+                </ul>
+              </div>
+              <div class="full-screen">
+                <img class="btns" src="media/fullscreen_white_36dp.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
